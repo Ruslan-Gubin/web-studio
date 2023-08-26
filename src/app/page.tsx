@@ -19,7 +19,7 @@ export default async function Home() {
 
   return (
     <main className={styles.main}>
-      <h1>Home11</h1>
+      <h1>Home Change Text</h1>
       <p>Connect server {connect.success.toString()}</p>
     </main>
   );
