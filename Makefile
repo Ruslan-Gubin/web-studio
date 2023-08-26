@@ -5,4 +5,4 @@ run-dev:
 stop: 
 		docker stop monopolyfront		
 
-    docker run -d -p 3000:3000 -v web-studio:/usr/app --rm --name studio-next next
+    docker run -d -p 3000:3000 -v web-studio:/usr/app --rm --name studio-next testimagenext

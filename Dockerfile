@@ -26,9 +26,9 @@
 # EXPOSE 3000
 # CMD ["npm", "start"]
 
-FROM node:18
+FROM node
 
-WORKDIR /usr/app
+WORKDIR /
 
 COPY package*.json ./
 COPY tsconfig.json .
