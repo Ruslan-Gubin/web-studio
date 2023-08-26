@@ -29,7 +29,7 @@ async function fetchData(id: string): Promise<IPost> {
 export async function generateMetadata( {params: { id }}: Props ): Promise<Metadata> {
   const post = await fetchData(id)
   return {
-    title: post.title,
+    title: id,
   }
 }
 

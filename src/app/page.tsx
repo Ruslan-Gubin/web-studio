@@ -17,7 +17,6 @@ async function fetchData(): Promise<{ success: boolean, test: boolean }> {
 
 export default async function Home() {
   const connect = await fetchData()
-  console.log(connect)
 
   return (
     <main className={styles.main}>
