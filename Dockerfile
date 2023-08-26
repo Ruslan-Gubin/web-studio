@@ -25,17 +25,3 @@ COPY --from=builder /web-studio/node_modules ./node_modules
 
 EXPOSE 3000
 CMD ["npm","run", "start"]
-
-# FROM node:18
-
-# WORKDIR /usr/app
-
-# COPY package*.json ./
-
-# RUN npm ci
-
-# COPY . .
-
-# EXPOSE 3000
-
-# CMD ["npm","run", "start"]
