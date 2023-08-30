@@ -1,0 +1,70 @@
+.input_container {
+  font-size: 1.3rem;
+  position: relative;
+
+  .country {
+    position: absolute;
+    top: 30px;
+    left: 17px;
+    color: rgb(85, 85, 85);
+  }
+
+  .error {
+    color: rgb(254, 52, 52);
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .label {
+    color: rgb(85, 85, 85);
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .label_required {
+    &::after {
+      content: '*';
+      padding-left: 5px;
+      color: red;
+      font-size: 1rem;
+    }
+  }
+
+  .phone_input {
+    border: 1px solid rgba(0, 0, 0, 0.169);
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: 100%;
+    padding-left: 30px;
+    letter-spacing: 2px;
+    color: rgb(73, 68, 68);
+
+    &::placeholder {
+      color: rgb(134, 134, 134);
+    }
+  }
+}
+
+.phone_input__orange {
+  &:focus {
+    border: 1px solid orange;
+  }
+}
+.phone_input__red {
+  &:focus {
+    border: 1px solid rgb(250, 29, 29);
+  }
+}
+.phone_input__blue {
+  &:focus {
+    border: 1px solid rgb(127, 146, 253);
+  }
+}
+.phone_input__green {
+  &:focus {
+    border: 1px solid rgb(74, 203, 69);
+  }
+}
+

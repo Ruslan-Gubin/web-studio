@@ -1,8 +1,3 @@
-interface ModalFooterText {
-  submitText: string;
-  cancelText: string;
-}
-
 interface ModalRGProps {
   width?: number;
   active: boolean;
@@ -10,8 +5,6 @@ interface ModalRGProps {
   handleClose: () => void;
   title?: string;
   handleCancel?: () => void;
-  submitModal?: () => void;
-  footer?: ModalFooterText;
 }
 
 export type { ModalRGProps };

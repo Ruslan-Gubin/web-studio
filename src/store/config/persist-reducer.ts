@@ -11,13 +11,7 @@ export const persistedReducer = persistReducer(
 
     storage,
     blacklist: [
-      'viewerFeature',
-      'selectionMessage',
-      'gameConfirmation',
-      'selection',
-      'cells',
-      'board',
-      'player',
+      'modal',
     ],
   },
   rootReducer

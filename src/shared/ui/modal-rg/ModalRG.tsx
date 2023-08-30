@@ -1,5 +1,4 @@
 import React from "react";
-import { ButtonRG } from "../button-rg/ButtonRG";
 import { CloseIcon } from "../icon-close/CloseIcon";
 import "./ModalRG.css";
 import { ModalRGProps } from "./types";
@@ -49,16 +48,6 @@ const ModalRG: React.FC<ModalRGProps> = React.memo((props) => {
           </div>
         )}
         <div className="modalrg-content">{props.children}</div>
-        {props.footer && props.handleCancel && props.submitModal && (
-          <div className="modalrg-footer">
-            <ButtonRG size="md" color="success" handleClick={props.submitModal}>
-              {props.footer.submitText}
-            </ButtonRG>
-            <ButtonRG size="md" color="danger" handleClick={props.handleCancel}>
-              {props.footer.cancelText}
-            </ButtonRG>
-          </div>
-        )}
       </div>
     </div>
   );

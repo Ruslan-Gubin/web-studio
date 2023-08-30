@@ -6,6 +6,7 @@ type ColorType =
   | "info"
   | "light"
   | "dark"
+  | "orange"
   | "success";
 
 interface ButtonRGProps {
