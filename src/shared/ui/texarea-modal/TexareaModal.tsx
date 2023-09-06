@@ -1,5 +1,5 @@
 'use client'
-import { ChangeEventHandler } from "react";
+import { ChangeEventHandler, memo } from "react";
 
 import styles from "./TexareaModal.module.scss";
 
@@ -10,9 +10,8 @@ type Props = {
   labelText: string;
 }
 
-const TexareaModal = ({ onChange, value, colorBorderFocus='orange', labelText }: Props) => {
+const TexareaModal = memo(({  onChange, value, colorBorderFocus='orange', labelText }: Props) => {
  
-
   return (
     <>
     <label htmlFor="text-area" className={styles.label}>{labelText}</label>
@@ -25,6 +24,6 @@ const TexareaModal = ({ onChange, value, colorBorderFocus='orange', labelText }:
     ></textarea>
     </>
   );
-};
-
+});
+TexareaModal.displayName = 'TexareaModal'
 export { TexareaModal };

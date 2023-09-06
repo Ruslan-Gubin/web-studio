@@ -1,21 +1,20 @@
 .root {
-  padding: 20px 0;
   background-color: rgb(238, 238, 238);
-  @media (max-width: 990px) {
-    background-color: rgb(255, 255, 255);
-    box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.091);
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    @media (max-width: 1200px) {
-      padding: 0 20px;
-    }
-    @media (max-width: 990px) {
-      // display: none;
-    }
 
+  @media (max-width: 990px) {
+    display: none;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .link_list {
+      display: flex;
+
+      &__item {
+        padding: 18px 0;
+      }
+    }
   }
 }

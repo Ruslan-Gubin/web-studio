@@ -1,7 +1,31 @@
 .body {
+  height: 100%;
+
+  &::-webkit-scrollbar {
+    background-color: rgb(245, 245, 245);
+    width: 7px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(200, 200, 200);
+    border-radius: 10px;
+  }
+
   .container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .main {
+      flex: 1 1 auto;
+    }
 
 
   }
-  
+
+  @media (max-width: 990px) {
+    .opasity_links {
+      box-shadow: inset 1px 3px 7px 5px rgba(0, 0, 0, 0.091);
+      min-height: 50px;
+    }
+  }
 }

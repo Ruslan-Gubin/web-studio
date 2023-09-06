@@ -1,5 +1,5 @@
 
-export function debounce<T extends (...args: any[]) => void>(func: T, timeout = 500) {
+export function debounce<T extends (...args: any[]) => void>(func: T, timeout = 400) {
   let timer: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
     clearTimeout(timer);

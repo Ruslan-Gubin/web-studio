@@ -1,5 +1,5 @@
 "use client";
-import { useCallback, useEffect, useRef } from "react";
+import { memo, useCallback, useEffect, useRef } from "react";
 
 import styles from "./PhoneInput.module.scss";
 
@@ -8,15 +8,23 @@ type Props = {
   errorText?: boolean;
   required?: boolean;
   getValue: (value: string) => void;
+  className?: string;
 };
 
-const PhoneInput = ({
+const PhoneInput = memo(({
   colorBorderFocus,
   errorText,
   required,
   getValue,
+  className,
 }: Props) => {
   const ref = useRef<HTMLInputElement>(null);
+
+  const classes = [`${styles.input_container}`]
+
+  if (className) {
+    classes.push(className);
+  }
 
   const phoneFormat = useCallback(
     (e: Event) => {
@@ -82,7 +90,7 @@ const PhoneInput = ({
   }, [phoneFormat]);
 
   return (
-    <div className={styles.input_container}>
+    <div className={classes.join(" ")}>
       <span className={styles.country}>+</span>
       {errorText ? (
         <span className={styles.error}>Неверный номер телефона</span>
@@ -107,6 +115,6 @@ const PhoneInput = ({
       />
     </div>
   );
-};
-
+});
+PhoneInput.displayName = 'PhoneInput'
 export { PhoneInput };

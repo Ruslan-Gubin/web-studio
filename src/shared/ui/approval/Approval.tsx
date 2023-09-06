@@ -1,3 +1,4 @@
+import { memo } from "react";
 import styles from "./Approval.module.scss";
 
 type Props = {
@@ -6,7 +7,7 @@ type Props = {
   toggleApproval: () => void;
 }
 
-const Approval = ({ approvalText, isActive, toggleApproval }: Props) => {
+const Approval = memo(({ approvalText, isActive, toggleApproval }: Props) => {
 
   return (
     <button type='submit'  onClick={toggleApproval} className={styles.approval_wrapper}>
@@ -14,6 +15,8 @@ const Approval = ({ approvalText, isActive, toggleApproval }: Props) => {
         <p className={styles.approval_text}>{approvalText}</p>
      </button>
   );
-};
+});
+
+Approval.displayName = 'Approval'
 
 export { Approval };

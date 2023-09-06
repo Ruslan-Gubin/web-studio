@@ -43,7 +43,7 @@ const InputRG: FC<InputProps> = memo(
 
     return (
       <label htmlFor={name} className="inputrg-label">
-        {label}
+        {error ? <p className="inputrg-error">{error && errorText}</p> : label}
         <input
           value={value}
           type={type}
@@ -58,7 +58,6 @@ const InputRG: FC<InputProps> = memo(
         >
           {variant && sizeInput !== "sm" && variants[variant]}
         </div>
-        {errorText && <p className="inputrg-error">{error && errorText}</p>}
       </label>
     );
   }

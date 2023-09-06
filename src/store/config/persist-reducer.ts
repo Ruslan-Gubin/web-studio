@@ -12,6 +12,7 @@ export const persistedReducer = persistReducer(
     storage,
     blacklist: [
       'modal',
+      'menu',
     ],
   },
   rootReducer

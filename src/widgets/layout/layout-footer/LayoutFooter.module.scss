@@ -1,3 +1,23 @@
-.container {
-  background-color: gray;
+.root {
+  background-color: #f4f4f4;
+  min-height: 50px;
+  .container {
+    font-size: 1.15rem;
+    color: #494949;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    @media (max-width: 1200px) {
+      padding: 0 20px;
+    }
+    @media (max-width: 990px) {
+      flex-direction: column;
+      text-align: center;
+    }
+    .footer_item {
+      padding: 20px 0;
+    }
+  }
 }

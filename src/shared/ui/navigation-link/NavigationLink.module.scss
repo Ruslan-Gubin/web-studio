@@ -1,13 +1,18 @@
 .link {
-  color: black;
+  color: #494949;
   padding-right: 25px;
   font-size: 1rem;
   transition: all 0.5s ease;
+  font-weight: 600;
+  font-size: 1.1rem;
   &:hover {
-    color: rgb(5, 5, 200);
+    color: rgb(157, 157, 157);
   }
 }
 
 .active {
-  color: blue;
+  color: rgb(255, 166, 64);
+  &:hover {
+    color: rgb(255, 166, 64);
+  }
 }

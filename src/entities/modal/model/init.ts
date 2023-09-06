@@ -2,7 +2,7 @@ import { ModalInitState } from "./types";
 
 
 const initialState: ModalInitState = {
-  isActive: true,
+  isActive: false,
   title: null,
   variant: null,
   subTitle: null,

@@ -1,0 +1,65 @@
+
+
+  .swipper_array {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 11px;
+      left: 0px;
+      width: 20px;
+      height: 4px;
+      background-color: rgb(32, 32, 32);
+      rotate: (-45deg);
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 23px;
+      left: 0px;
+      width: 20px;
+      height: 4px;
+      background-color: rgb(32, 32, 32);
+      rotate: (45deg);
+    }
+  }
+
+  .swiper_prev__button {
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    width: 20px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0);
+    @media (max-width: 710px) {
+      display: none;
+    }
+    z-index: 1;
+  }
+  .swiper_next__button {
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    width: 20px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0);
+    rotate: (180deg);
+    @media (max-width: 710px) {
+      display: none;
+    }
+    z-index: 1;
+  }
+  .swiper_item {
+    height: auto;
+  }
+
+  .swiper {
+    z-index: 0;
+    cursor: pointer;
+    @media (max-width: 575px) {
+   
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }

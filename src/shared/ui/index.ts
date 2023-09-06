@@ -5,3 +5,8 @@ export * from "./unput-rg/InputRG";
 export * from "./phone-input/PhoneInput";
 export * from "./approval/Approval";
 export * from "./texarea-modal/TexareaModal";
+export * from "./image-main/ImageMain";
+export * from "./content-container/ContentContainer";
+export * from "./swiper/SwiperMain";
+export * from "./content-title/ContentTitle";
+export * from "./dropdown/Dropdown"; 
