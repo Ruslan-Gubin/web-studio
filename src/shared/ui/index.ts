@@ -8,5 +8,5 @@ export * from "./texarea-modal/TexareaModal";
 export * from "./image-main/ImageMain";
 export * from "./content-container/ContentContainer";
 export * from "./swiper/SwiperMain";
-export * from "./content-title/ContentTitle";
 export * from "./dropdown/Dropdown"; 
+export * from "./content-title/ContentTitle"; 

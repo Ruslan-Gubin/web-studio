@@ -10,7 +10,11 @@ type Props = {
 };
 
 const getAddres = (marker: MarkerType) => {
-  return `г.${marker.sity}, ул.${marker.street}, ${marker.house}`
+  const sity = marker.sity ? `г.${marker.sity},` : '';
+  const street = marker.street ? `ул.${marker.street},` : '';
+  const house = marker.house ? `${marker.house}` : '';
+
+  return `${sity} ${street} ${house}`
 }
 
 const getSelectOptions = (items: any[]): OptionsSelectType[] | null => {

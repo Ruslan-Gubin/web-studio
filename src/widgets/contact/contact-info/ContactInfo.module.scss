@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 70px;
+  margin-bottom: 30px;
 
   .contact_phones {
     &__item {
@@ -14,5 +14,8 @@
   }
 
   .contact_email {
+  }
+  .button_container {
+    padding-top: 30px;
   }
 }

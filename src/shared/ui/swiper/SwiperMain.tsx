@@ -1,7 +1,7 @@
 "use client";
+import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperCore } from "swiper/types";
-import { useRef } from "react";
 
 import "swiper/css";
 import styles from "./SwiperMain.module.scss";
@@ -37,11 +37,13 @@ const SwiperMain = ({ SlideComponent, data }: Props) => {
   const handleSwiperInit = (swiper: SwiperCore) =>  swiperRef.current = swiper;
 
   return (
-    <>
-      <button
+    <div className={styles.swiper_container}>
+      <div
         className={`${styles.swiper_prev__button} ${styles.swipper_array}`}
         onClick={() => swiperRef.current?.slidePrev()}
-      ></button>
+      >
+        <button onClick={() => swiperRef.current?.slidePrev()} className={styles.button_press}></button>
+      </div>
 
       <Swiper
         className={`${styles.swiper} mySwiper`}
@@ -54,16 +56,17 @@ const SwiperMain = ({ SlideComponent, data }: Props) => {
         <ul className={styles.services_list}>
           {data.map((item, index) => (
             <SwiperSlide key={index} className={styles.swiper_item}>
-              <SlideComponent data={item} />
+              <SlideComponent data={{...item, id: index}} />
             </SwiperSlide>
           ))}
         </ul>
       </Swiper>
-      <button
+      <div
         className={`${styles.swiper_next__button} ${styles.swipper_array}`}
-        onClick={() => swiperRef.current?.slideNext()}
-      ></button>
-    </>
+      >
+        <button onClick={() => swiperRef.current?.slideNext()} className={styles.button_press}></button>
+      </div>
+    </div>
   );
 };
 

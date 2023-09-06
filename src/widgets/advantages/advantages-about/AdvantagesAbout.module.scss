@@ -1,0 +1,109 @@
+.advantagesWrapper {
+  padding-top: 70px;
+  padding-bottom: 15px;
+
+  .advantages_list {
+    .advantages_item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 55px;
+
+      @media (max-width: 990px) {
+        flex-direction: column;
+      }
+
+      .advantages_item__image {
+        width: 510px;
+        height: 340px;
+        @media (max-width: 1200px) {
+          width: 343px;
+          height: 230px;
+        }
+        @media (max-width: 990px) {
+          width: 100%;
+          height: 466px;
+        }
+        @media (max-width: 768px) {
+          width: 85%;
+          height: 326px;
+          margin: 0 auto;
+        }
+        @media (max-width: 575px) {
+          width: 95%;
+          height: 300px;
+        }
+      }
+
+      .advantages_item__notext {
+        @media (max-width: 1200px) {
+          width: 60%;
+          height: 230px;
+
+        }
+        @media (max-width: 990px) {
+          width: 80%;
+          height: 466px;
+        }
+        @media (max-width: 575px) {
+          width: 80%;
+          height: 300px;
+        }
+      }
+
+      .advantages_text__list {
+        @media (min-width: 1200px) {
+          width: 50%;
+        }
+        @media (min-width: 990px) and (max-width: 1200px) {
+          width: 57%;
+        }
+
+        @media (max-width: 990px) {
+          padding-top: 30px;
+        }
+
+        .advantages_text__item {
+          font-size: 1.4rem;
+          font-weight: 350;
+          padding-bottom: 16px;
+          line-height: 26px;
+          padding-left: 36px;
+          position: relative;
+          @media (max-width: 768px) {
+            font-size: 1.15rem;
+            width: 80%;
+            margin: 0 auto;
+          }
+          @media (max-width: 575px) {
+            width: 95%;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            top: 14px;
+            left: 0px;
+            width: 20px;
+            height: 1px;
+            background-color: red;
+          }
+        }
+      }
+      .advantages_text__noimage {
+        @media (min-width: 1200px) {
+          width: 100%;
+          margin: 0 auto;
+        }
+        @media (min-width: 990px) and (max-width: 1200px) {
+          width: 100%;
+          margin: 0 auto;
+        } 
+      }
+    }
+    .advantages_item__reverse {
+      @media (min-width: 990px) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}

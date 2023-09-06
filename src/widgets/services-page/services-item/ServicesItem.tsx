@@ -20,6 +20,7 @@ const ServicesItem = (props: Props) => {
       <div className={styles.content}>
         <div className={styles.services_list__image}>
           <ImageMain
+          className={styles.image}
             src={image}
             width={370}
             height={250}

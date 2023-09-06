@@ -1,5 +1,4 @@
-import { ImageMain } from "@/shared";
-import ContentTitle from "@/shared/ui/content-title/ContentTitle";
+import { ContentTitle, ImageMain, StylesSelection } from "@/shared";
 import styles from "./AboutPromo.module.scss";
 
 type Props = {
@@ -9,8 +8,8 @@ type Props = {
     textTop?: string;
     textCenter?: string;
     textBottom?: string;
-    backgroundColor: string;
-    colorText: string;
+    backgroundColor: string | null;
+    textColor: string;
   };
 };
 
@@ -22,16 +21,13 @@ const AboutPromo = ({ aboutData }: Props) => {
     textTop,
     title,
     backgroundColor,
-    colorText,
+    textColor,
   } = aboutData;
 
-  const stylesColor = {
-    backgroundColor: backgroundColor ? backgroundColor : "#dfe6e6",
-    color: colorText ? colorText : "#494949",
-  };
+  const stylesSelection =  new StylesSelection({ backgroundColor, textColor })
 
   return (
-    <section style={stylesColor} className={styles.root}>
+    <section style={stylesSelection.styles} className={styles.root}>
       <div className={styles.container}>
         <ContentTitle title={title ? title : "О компании"} />
         {textTop && <p className={styles.top_text}>{textTop}</p>}
@@ -64,7 +60,7 @@ const AboutPromo = ({ aboutData }: Props) => {
                 width={"100%"}
                 height={"100%"}
                 src={image}
-                priority
+                priority={true}
               />
             )}
           </div>

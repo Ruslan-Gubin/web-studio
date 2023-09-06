@@ -43,8 +43,8 @@ const contactData = {
   street: 'г.Иркутск, ул.Байкальская, 318/3',
   phones: ['+7 (3952) 700 - 051', '+7 (914) 930-07-24'],
   email: 'gubin_ruslan@rambler.ru',
-  backgroundColor: null,
-  colorText: null,
+  backgroundColor: '',
+  colorText: '',
   company_list,  
 }
 

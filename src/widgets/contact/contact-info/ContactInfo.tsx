@@ -1,4 +1,5 @@
-import ContentTitle from '@/shared/ui/content-title/ContentTitle';
+import { OpenModal } from '@/features';
+import { ContentTitle } from '@/shared';
 import type { ContactData } from '../ContactSection';
 
 import styles from './ContactInfo.module.scss'
@@ -21,6 +22,15 @@ const ContactInfo = ({ contactData }: Props) => {
         )}
       </ul>
       <span className={styles.contact_email}>{email ? email : ''}</span>
+          <div className={styles.button_container}>
+      <OpenModal
+            size="lg"
+            buttonText="Оставить заявку"
+            subTitle="Мы рассчитаем стоимость вашего объекта в кратчайшие сроки"
+            title="Напишите нам"
+            variant="order"
+            />
+            </div>
     </div>
   );
 };

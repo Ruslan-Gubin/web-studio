@@ -1,5 +1,4 @@
-import { ContentContainer } from "@/shared";
-import ContentTitle from "@/shared/ui/content-title/ContentTitle";
+import { ContentContainer, ContentTitle } from "@/shared";
 import { ServicesItem } from "../services-item/ServicesItem";
 import dynamic from "next/dynamic";
 

@@ -1,3 +1,4 @@
+import { StylesSelection } from "@/shared";
 import { ContactInfo } from "./contact-info/ContactInfo";
 import { ContactMap } from "./contact-map/ContactMap";
 
@@ -8,8 +9,8 @@ export type ContactData = {
   street?: string;
   phones?: string[];
   email?: string;
-  backgroundColor?: string | null;
-  colorText?: string | null;
+  backgroundColor: string | null;
+  textColor?: string | null;
   company_list: MarkerType[]
 };
 
@@ -18,15 +19,12 @@ type Props = {
 }; 
 
 const ContactSection = ({ contactData }: Props) => {
-  const { backgroundColor, colorText } = contactData 
+  const { backgroundColor, textColor } = contactData 
 
-  const stylesColor = {
-    backgroundColor: backgroundColor ? backgroundColor : "#ffffff",
-    color: colorText ? colorText : "#494949",
-  };
+  const stylesSelection =  new StylesSelection({ backgroundColor, textColor })
 
   return (
-    <div style={stylesColor} className={styles.root}>
+    <div style={stylesSelection.styles} className={styles.root}>
       <ContactInfo contactData={contactData} />
       {contactData.company_list.length > 0 &&  
       <ContactMap  markers={contactData.company_list}  />

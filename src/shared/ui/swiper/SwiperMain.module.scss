@@ -1,4 +1,7 @@
-
+.swiper_container {
+  display: flex;
+  align-items: center;
+}
 
   .swipper_array {
     position: relative;
@@ -25,21 +28,20 @@
   }
 
   .swiper_prev__button {
-    position: absolute;
+    position: relative;
     top: 50%;
-    left: -5px;
+    left: -20px;
     width: 20px;
     height: 40px;
     background-color: rgba(255, 255, 255, 0);
     @media (max-width: 710px) {
       display: none;
     }
-    z-index: 1;
+    z-index: 0;
   }
   .swiper_next__button {
-    position: absolute;
-    top: 50%;
-    right: -5px;
+    position: relative;
+    right: -20px;
     width: 20px;
     height: 40px;
     background-color: rgba(255, 255, 255, 0);
@@ -47,11 +49,24 @@
     @media (max-width: 710px) {
       display: none;
     }
-    z-index: 1;
+    z-index: 0;
   }
   .swiper_item {
     height: auto;
+    align-items: center;
+    justify-content: center;
   }
+  .button_press {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    cursor: pointer;
+    background-color: rgba(19, 215, 25, 0);
+    z-index: 1;
+  }
+  
 
   .swiper {
     z-index: 0;
