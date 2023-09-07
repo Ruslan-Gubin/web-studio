@@ -7,6 +7,7 @@ import styles from "./ContactMap.module.scss";
 
 type Props = {  
   markers: MarkerType[];
+  mapConfig: { token: string, style: string }
 };
 
 const getAddres = (marker: MarkerType) => {
@@ -26,7 +27,7 @@ const getSelectOptions = (items: any[]): OptionsSelectType[] | null => {
   }));
 };
 
-const ContactMap = ({ markers }: Props) => {
+const ContactMap = ({ markers, mapConfig }: Props) => {
   const [options] = useState<OptionsSelectType[] | null>(
     getSelectOptions(markers)
   );
@@ -65,6 +66,7 @@ const ContactMap = ({ markers }: Props) => {
         <span className={styles.address_list__item}>{getAddres(markers[0])}</span>
       )}
       <MapBox 
+      mapConfig={mapConfig}
       markers={markers}
       size={{ width: "100%", height: 343 }}
       center={getMapCenter(markers, activeAddress)}

@@ -7,7 +7,6 @@ import Map, {
   MapRef,
 } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-import { MAPBOX_STYLE, MAPBOX_TOKEN } from "@/shared/constants";
 import type { MarkerEvent } from "react-map-gl/dist/esm/types";
 import { useRenderMarkers, useRenderPopup } from "./utils";
 
@@ -21,14 +20,13 @@ type Props = {
   markers: MarkerType[];
   size: { width: number | string; height: number | string };
   zoom?: number;
+  mapConfig: { token: string, style: string }
 };
 
-const MapBox = ({ size, zoom, markers, center }: Props) => {
+const MapBox = ({ size, zoom, markers, center, mapConfig }: Props) => {
   const [selectedMarker, setSelectedMarker] = useState<MarkerType | null>(null);
   const mapRef = useRef<MapLang | null>(null);
 
-  const mapboxToken = MAPBOX_TOKEN;
-  const styleMapBox = MAPBOX_STYLE;
   const markersComponent = useRenderMarkers(markers, zoomToSelectedLoc)
   const popupComponent = useRenderPopup(selectedMarker, () => setSelectedMarker(null))
 
@@ -78,8 +76,8 @@ const MapBox = ({ size, zoom, markers, center }: Props) => {
   return (
     <Map
       ref={mapRef}
-      mapboxAccessToken={mapboxToken}
-      mapStyle={styleMapBox}
+      mapboxAccessToken={mapConfig.token}
+      mapStyle={mapConfig.style}
       style={{...size, zIndex: 0}}
       initialViewState={initialViewState}
       maxZoom={40}

@@ -1,4 +1,4 @@
-import { StylesSelection } from "@/shared";
+import { MAPBOX_STYLE, MAPBOX_TOKEN, StylesSelection } from "@/shared";
 import { ContactInfo } from "./contact-info/ContactInfo";
 import { ContactMap } from "./contact-map/ContactMap";
 
@@ -23,11 +23,16 @@ const ContactSection = ({ contactData }: Props) => {
 
   const stylesSelection =  new StylesSelection({ backgroundColor, textColor })
 
+  const mapConfig = {
+    token: MAPBOX_TOKEN!,
+    style: MAPBOX_STYLE!,
+  }
+
   return (
     <div style={stylesSelection.styles} className={styles.root}>
       <ContactInfo contactData={contactData} />
       {contactData.company_list.length > 0 &&  
-      <ContactMap  markers={contactData.company_list}  />
+      <ContactMap  markers={contactData.company_list} mapConfig={mapConfig}  />
       }
     </div>
   );

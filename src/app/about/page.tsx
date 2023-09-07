@@ -35,7 +35,7 @@ const about_advantages = {
 
 const about_reviews = {
   title: 'Отзывы',
-  backgroundColor: '#f3f3f3',
+  backgroundColor: '#dfe6e6',
   textColor: '',
   reviews_list: [
     { image: mockUserImag, name: 'Ruslan', text: 'Nice and big variety of themes and templates. The best thing is their support though, very helpful and friendly.Nice and big variety of themes and templates. The best thing is their support though, very helpful and friendlyNice and big variety of themes and templates. The best thing is their support though, very helpful and friendly' },

@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import { ImageMain } from "@/shared";
 import { StarsSvg } from "../stars-svg/StarsSvg";
 
@@ -14,6 +14,7 @@ type Props = {
 };
 
 const ReviewItem = ({ data }: Props) => {
+
   return (
     <div className={styles.review}>
       <div className={styles.review_header}>
