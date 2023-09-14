@@ -21,7 +21,7 @@ COPY --from=builder /web-studio/public ./public
 COPY --from=builder /web-studio/package.json ./package.json
 COPY --from=builder /web-studio/.next ./.next
 COPY --from=builder /web-studio/node_modules ./node_modules
-
+COPY --from=builder /web-studio/next.config.js ./next.config.js
 
 EXPOSE 3000
 CMD ["npm","run", "start"]

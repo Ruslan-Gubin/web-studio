@@ -1,6 +1,5 @@
 import { useAppDispatch, useAppSelector } from "@/shared";
 import { menuSlice } from "./slice";
-import { MenuInitState } from "./types";
 
 
 const menuSelect = (state: RootState) => state.menu;

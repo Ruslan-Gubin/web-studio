@@ -1,9 +1,10 @@
 "use client";
-import { useModalAction } from "@/entities";
+import { useModalOpen } from "@/entities";
 import styles from "./LayoutCallButton.module.scss";
 
 const LayoutCallButton = () => {
-  const { openModal } = useModalAction();
+  const { openModal } = useModalOpen();
+
 
   const handleOpenModal = () => {
     openModal({

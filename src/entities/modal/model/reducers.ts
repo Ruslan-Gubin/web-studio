@@ -1,25 +1,21 @@
 import { PayloadAction } from "@reduxjs/toolkit/dist/createAction";
-import { ModalInitState, OpenModelProps } from "./types";
+import { ModalModel } from "../domain/modal";
 
 export const reducers = {
 
-  openModal(state: ModalInitState, action: PayloadAction<OpenModelProps>) {
-    state.isActive = true;
-    state.title = action.payload.title;
-    state.variant = action.payload.variant;
-    state.subTitle = action.payload.subTitle;
-    state.buttonText = action.payload.buttonText;
+  openModal(state: ModalModel, action: PayloadAction<ModalModel>) {
+    for (const field in action.payload) {
+      state[field] = action.payload[field]
+    }
   },
   
-  closeModal(state: ModalInitState) {
-    state.isActive = false;
-    state.title = null;
-    state.variant = null;
-    state.subTitle = null;
-    state.buttonText = null;
+  closeModal(state: ModalModel, action: PayloadAction<ModalModel>) {
+    for (const field in action.payload) {
+      state[field] = action.payload[field]
+    }
   },
 
-  toggleApproval(state: ModalInitState) {
+  toggleApproval(state: ModalModel) {
     state.approval = !state.approval
   },
 

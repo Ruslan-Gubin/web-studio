@@ -1,14 +1,15 @@
 "use client";
 import { ChangeEventHandler, useCallback, useState } from "react";
-import { useModalAction, useModalSelect } from "@/entities";
+import {  useModalClose, useModalSelect, useToggleAproval } from "@/entities";
 import { Approval, InputRG, ModalRG, PhoneInput, TexareaModal } from "@/shared";
+import { SendRequest } from "@/features";
 
 import styles from "./LayoutModal.module.scss";
-import { SendRequest } from "@/features";
 
 
 const LayoutModal = () => {
-  const { closeModal, toggleApproval } = useModalAction();
+  const { toggleApproval } = useToggleAproval()
+  const { closeModal } = useModalClose()
   const { isActive, title, variant, subTitle, buttonText, approval } =
     useModalSelect();
   const [phoneValue, setPhoneValue] = useState("");

@@ -1,5 +1,5 @@
 "use client";
-import { OpenModelProps, useModalAction } from "@/entities";
+import { OpenModelProps, useModalOpen } from "@/entities";
 import { ButtonRG } from "@/shared/ui/button-rg/ButtonRG";
 
 interface Props extends OpenModelProps { 
@@ -7,7 +7,7 @@ interface Props extends OpenModelProps {
 };
 
 const OpenModal = ({ buttonText, variant, title, subTitle, size }: Props) => {
-  const { openModal } = useModalAction();
+  const { openModal } = useModalOpen();
 
   const handleOpenModal = () => {
     openModal({

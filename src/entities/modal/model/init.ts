@@ -1,7 +1,6 @@
-import { ModalInitState } from "./types";
+import { ModalModel } from "../domain/modal";
 
-
-const initialState: ModalInitState = {
+const initialState: ModalModel = {
   isActive: false,
   title: null,
   variant: null,
